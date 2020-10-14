@@ -31,8 +31,8 @@ app.use('/',routes())
 
 
 const host = process.env.HOST || '0.0.0.0'
-const port = process.env.PORT || 3306
+var port = process.env.PORT || 8080;
 
-app.listen(port,host , () => {
-   console.log("el servidor esta funcionando")
-})
+
+var server=app.listen(port,function() {
+    console.log("app running on port 8080"); });
