@@ -28,7 +28,7 @@ html(lang="en")
                                 p.font-weight-bold.mr-3=libro.titulo
                                 p.font-weight-light.mr-3='autor: ' + libro.autor
                                 p.font-weight-light.mr-3='subido: ' + moment(libro.created_at).format("dddd, MMMM Do YYYY")
-                                a.ml-3(href=`//${libro.link}`).descarga Descargar
+                                a.ml-3(href=`${libro.link}` target="_blank").descarga Descargar
 
         .container                          
             div.row.justify-content-center
