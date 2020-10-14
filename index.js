@@ -4,7 +4,7 @@ const path = require('path')
 const bodyParser = require('body-parser')
 
 const db = require('./config/db')
-require('dotenv').config({path: '.env'});
+require('dotenv').config({path: 'variables.env'});
 
 require('./models/Libros')
 
@@ -31,7 +31,7 @@ app.use('/',routes())
 
 
 const host = process.env.HOST || '0.0.0.0'
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3306
 
 app.listen(port,host , () => {
    console.log("el servidor esta funcionando")
