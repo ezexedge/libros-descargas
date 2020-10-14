@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include partials/header
+    body
+        header 
+            img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Anarchy-symbol.svg/562px-Anarchy-symbol.svg.png", alt="foto")
+            p La Libreria.
+        div.container
+            div.row
+                div.col-12.d-flex.justify-content-center
+                 
+        div.banderas        
+            iframe(src="https://giphy.com/embed/NQyTVHIykgXggvZAeA" width="100" height="180" frameBorder="0" class="giphy-embed bandera1" allowFullScreen href="https://giphy.com/gifs/flag-anarchy-NQyTVHIykgXggvZAeA")                       
+            iframe(src="https://giphy.com/embed/NQyTVHIykgXggvZAeA" width="100" height="180" frameBorder="0" class="giphy-embed bandera2" allowFullScreen href="https://giphy.com/gifs/flag-anarchy-NQyTVHIykgXggvZAeA")                       
+
+        div.container
+            div.row
+                div.col-12
+                    .text-center.title
+                        h2 Ultimas Entradas
+            div.row.justify-content-center.mt-4
+                div.col-md-9.col-sm-12
+                    each libro in libros
+                         ul.list-group
+                             li.list-group-item.d-flex.justify-content-between
+                                i(aria-hidden="true").fa.fa-book.mr-3
+                                p.font-weight-bold.mr-3=libro.titulo
+                                p.font-weight-light.mr-3='autor: ' + libro.autor
+                                p.font-weight-light.mr-3='subido: ' + moment(libro.created_at).format("dddd, MMMM Do YYYY")
+                                a.ml-3(href=`//${libro.link}`).descarga Descargar
+
+        .container                          
+            div.row.justify-content-center
+                .col-12.text-center.mt-5
+
+                    - var n = 1
+                        while n <= pages
+                            if page == n
+                                a(href=`/${n}`).boton-selecionado=n
+                            else
+                                a(href=`/${n}`).boton=n
+                            -n++
+                            
+                
+                        
+
+        footer
+            .container 
+                .row
+                    .col-12
+                        h4.text-center.font-weight-bold PUGJS 💛 NODEJS 💛 MYSQL 
+
+
+
+

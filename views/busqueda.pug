@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include partials/header
+    body
+        header
+        div.container
+            div.row
+                div.col-12.d-flex.justify-content-center
+                    form(action="/busqueda" method="GET")
+                        input(type="text" name="busqueda" placeholder="Busca un libro ej: dios y el estado").form-control
+                        input(type="submit" value="Buscar" class="btn btn-rosa")
+
+        div.banderas        
+            iframe(src="https://giphy.com/embed/NQyTVHIykgXggvZAeA" width="100" height="180" frameBorder="0" class="giphy-embed bandera1" allowFullScreen href="https://giphy.com/gifs/flag-anarchy-NQyTVHIykgXggvZAeA")                       
+            iframe(src="https://giphy.com/embed/NQyTVHIykgXggvZAeA" width="100" height="180" frameBorder="0" class="giphy-embed bandera2" allowFullScreen href="https://giphy.com/gifs/flag-anarchy-NQyTVHIykgXggvZAeA")                       
+
+        div.container
+            div.row
+                div.col-12
+                    .text-center.title
+                        h2 Resultado de busqueda
+            div.row.justify-content-center.mt-4
+                div.col-md-9.col-sm-11
+                    p=busqueda
+
+        footer
+            .container 
+                .row
+                    .col-12
+                        h4.text-center Hola footer  
+
+
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include partials/header
+    body
+        header
+        div.container
+            div.row
+                h2.text-center Agregue Libro
+                div.col-12.d-flex.justify-content-center
+                    form#formulario.caja.caja-login(method="POST" action="/subir")
+                        .campo
+                        label(for="titulo") titulo:
+                        input(type="text" name="titulo" placeholder="ingrese el titulo" value=titulo )
+                        .campo
+                        label(for="autor") autor:
+                        input(type="text" name="autor" placeholder="ingrese el autor" value=autor )
+                        .campo
+                        label(for="link") link:
+                        input(type="text" name="link" placeholder="ingrese el link"  value=link )
+                        .campo.enviar
+                        input.boton(type="submit" value="Crear Cuenta")
+                  
+
+        footer
+            .container 
+                .row
+                    .col-12
+                        h4.text-center Hola footer  
+
+
+
